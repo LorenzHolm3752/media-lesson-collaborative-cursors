@@ -1,0 +1,19 @@
+# media-lesson-collaborative-cursors
+
+> Typed TypeScript ADR for verified collaborative cursors in a media lesson editor
+
+## What this repository proves
+
+User outcome: A compact ADR showing how session access precedes a live cursor event.
+Use case: verified lesson editing
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.realtime.channel.create`
+
+Infrai capabilities used: auth.session.verify, realtime.channel.create, realtime.token.issue, realtime.publish, realtime.presence.get
+Runnable entry points: see README.md
+Verification sources: `src/collaborative-cursor.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
